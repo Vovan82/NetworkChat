@@ -148,4 +148,8 @@ public class RoomsActivity extends Activity {
 		}
 		return super.onCreateDialog(id);
 	}
+	@Override
+	public void onBackPressed(){
+		android.os.Process.killProcess(android.os.Process.myPid());
+	}
 }

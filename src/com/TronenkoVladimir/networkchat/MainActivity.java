@@ -51,7 +51,7 @@ public class MainActivity extends Activity {
 						Toast.makeText(MainActivity.this, "Error input passworld", Toast.LENGTH_SHORT).show();
 					} else {
 						try {
-							mApi.Auth(emai, pas);
+							mApi.auth(emai, pas);
 							Toast.makeText(MainActivity.this, "You can be registered", Toast.LENGTH_SHORT).show();
 						} catch (ApiException e) {
 							Toast.makeText(MainActivity.this, "Error email or passworld", Toast.LENGTH_SHORT).show();

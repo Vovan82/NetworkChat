@@ -1,5 +1,7 @@
 package com.TronenkoVladimir.networkchat;
 
+import java.util.List;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -40,6 +42,11 @@ public class Parser {
 			super(t);
 			errCode = -1;
 		}
+	}
+
+	public static void getRooms(String jsonResp, List<Room> list) { //*****************
+		// TODO Auto-generated method stub
+		
 	}
 
 }

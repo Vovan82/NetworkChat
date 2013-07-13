@@ -8,6 +8,7 @@
     
     <item android:id="@+id/action_remind" android:title="Remind" 
         android:actionLayout="@layout/remind_pasword"/>
+    
     <item android:id="@+id/action_info" android:title="About"/>
 
 </menu>
