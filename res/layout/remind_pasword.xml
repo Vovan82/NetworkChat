@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LayoutRemind"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/luxfon1"
+    android:orientation="horizontal" >
+
+    <EditText
+        android:id="@+id/fieldremind"
+        android:layout_width="230dp"
+        android:layout_height="15pt"
+
+        android:layout_marginTop="60dp"
+        android:background="@drawable/bakgraund1"
+        android:hint="@string/text1"
+        android:paddingLeft="8dp"
+        android:textSize="8pt" />
+
+    <Button
+        android:id="@+id/remindbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="15pt"
+        android:layout_weight="1"
+        android:background="@color/colorA"
+        android:onClick="onAcceptClick"
+        android:text="@string/remindbuttonAccept"
+        android:textColor="@android:color/primary_text_dark" />
+
+    <Button
+        android:id="@+id/remindbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="15pt"
+        android:layout_weight="1"
+        android:background="@color/colorB"
+        android:onClick="onCancelClick"
+        android:text="@string/remindbuttonCancel"
+        android:textColor="@android:color/primary_text_dark" />
+
+</LinearLayout>

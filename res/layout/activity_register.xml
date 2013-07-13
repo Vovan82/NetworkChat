@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Layout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/luxfon1"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/Layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout1"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/EmailField"
+            android:layout_width="288dp"
+            android:layout_height="15pt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bakgraund1"
+            android:hint="Email"
+            android:paddingLeft="8dp" />
+
+        <EditText
+            android:id="@+id/NicField"
+            android:layout_width="288dp"
+            android:layout_height="15pt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bakgraund1"
+            android:hint="Nic"
+            android:paddingLeft="8dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/Layout3"
+        android:layout_width="300dp"
+        android:layout_height="25pt"
+        android:layout_below="@id/NicField"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp" >
+
+        <EditText
+            android:id="@+id/Age"
+            android:layout_width="30pt"
+            android:layout_height="15pt"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bakgraund1"
+            android:hint="Age"
+            android:inputType="number"
+            android:paddingLeft="8dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="15pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/Age"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/Male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/checkBox1"
+            android:paddingLeft="8dp"
+            android:text="Male"
+            android:textColor="@color/colorD"
+            android:textSize="20dp" />
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="15pt"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/Male"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/Female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/checkBox2"
+            android:paddingLeft="8dp"
+            android:text="Female"
+            android:textColor="@color/colorD"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/Layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Layout3"
+        android:layout_marginTop="30dp"
+        android:gravity="top|center"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/PaswordA"
+            android:layout_width="288dp"
+            android:layout_height="15pt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bakgraund1"
+            android:hint="Pasword"
+            android:paddingLeft="8dp" />
+
+        <EditText
+            android:id="@+id/PaswordB"
+            android:layout_width="288dp"
+            android:layout_height="15pt"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bakgraund1"
+            android:hint="Pasword*"
+            android:paddingLeft="8dp" />
+
+        <Button
+            android:id="@+id/Register"
+            android:layout_width="100dp"
+            android:layout_height="15pt"
+            android:layout_marginTop="30dp"
+            android:background="@color/colorC"
+            android:text="Register"
+            android:onClick="onRegistryClick"
+            android:textColor="@android:color/primary_text_dark" />
+    </LinearLayout>
+
+</LinearLayout>

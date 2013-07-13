@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.TronenkoVladimir.networkchat"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.TronenkoVladimir.networkchat.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.TronenkoVladimir.networkchat.RegistryActive"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.TronenkoVladimir.networkchat.RoomsActivity"
+            android:label="@string/app_name"
+            android:launchMode="standard" >
+        </activity>
+        <activity
+            android:name="com.TronenkoVladimir.networkchat.RemindActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.TronenkoVladimir.networkchat.CheatActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
