@@ -2,6 +2,7 @@ package com.TronenkoVladimir.networkchat;
 
 import java.util.List;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -12,6 +13,8 @@ public class Parser {
 		try {
 			JSONObject json = new JSONObject(jsonString);
 			if (json.getString("status").equals("ok")) {
+				
+			JSONArray arr=json.getJSONArray("rooms");	
 				return new AuthInfo(json.getString("token"),
 						json.getString("nick"));
 

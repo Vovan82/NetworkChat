@@ -120,7 +120,7 @@ public class Api {
 	    
 	    public List<Room> getRooms() throws ParserException{
 	    	List<Room> list = new ArrayList<Room>();
-	    	String jsonResp=connect(BASE_URL+"/rooms?"+mAuthInfo.token);
+	    	String jsonResp=connect(BASE_URL+"/rooms?token="+mAuthInfo.token);
 	    	Parser.getRooms(jsonResp, list);
 	    	return list;
 	    }

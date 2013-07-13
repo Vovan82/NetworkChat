@@ -7,7 +7,7 @@ import android.os.Binder;
 import android.os.IBinder;
 
 public class ChatService extends Service {
-	private Api mApi;
+	private static Api mApi;
 	public void onCreate(){
 		super.onCreate();
 		mApi = new Api();
@@ -23,6 +23,11 @@ public class ChatService extends Service {
 		SelfBinder(ChatService srv){
 			this.srv=srv;
 		}
+	}
+		public void onDestroy(){
+		mApi=null;
+		super.onDestroy();
+		
 	}
 	public Api getApi(){
 		return mApi;

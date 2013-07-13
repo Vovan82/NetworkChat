@@ -7,34 +7,44 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CheatActivity extends Activity{
 
-//	private MessageAdapter mAdapter;
+	private MessageAdapter mAdapter;
+	private EditText mSendEditText;
 
 	private final static List<Message> mChat = new ArrayList<Message>();
 	
 	static {
 		mChat.add(new Message("dj sender", "dj light", "lets play"));
 		mChat.add(new Message("out", "nowhere", "test message"));
-		mChat.add(new Message("Vladimei", "Yanukovich", "Hello mr. president"));
+		mChat.add(new Message("Vladimir", "Yanukovich", "Hello mr. president"));
 
 }
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_cheat);
+		setContentView(R.layout.activity_chat);
 		
-		findViewById(R.id.send).setOnClickListener(new View.OnClickListener() {
+		findViewById(R.id.chat_send_button).setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View arg0) {
-				EditText ed = (EditText)findViewById(R.id.message);
-				
-               if(ed==null){
-            	   
-               }
+			public void onClick(View v) {
+				String sendText = mSendEditText.getText().toString();
+				if(sendText==null || sendText.trim().length()==0){
+					Toast.makeText(CheatActivity.this, "Enter text!", Toast.LENGTH_SHORT).show();
+				}
+				else{
+					Message m = new Message("Yanukovich","You",sendText);
+					mChat.add(m);
+					mAdapter.notifyDataSetChanged();
+					mSendEditText.setText(new String());
+
+				}
 			}
 		});
-}
+	}
+
+
 }
